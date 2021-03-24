@@ -1,14 +1,16 @@
 using System;
 using Xunit;
 
-namespace AkvDemoTest
+namespace AkvDemo
 {
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void TestGetValue()
         {
-
+            Akv akv = new Akv();
+            string SomeValue = akv.GetValue("SomeKey");
+            Assert.Equal("SomeValue", SomeValue);
         }
     }
 }
